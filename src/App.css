@@ -1,0 +1,316 @@
+#root {
+  margin: 0 auto;
+}
+
+.moleArea .startCnt {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 800px;
+}
+.moleArea .startCnt h1 {
+  font-size: 0;
+  display: inline-block;
+  margin: 0;
+  opacity: 0;
+  transition: 0.8s;
+  animation: fadein 1.5s, vibration 0.2s infinite;
+}
+.moleArea .startCnt h1.startTxt {
+  font-size: 0;
+  display: inline-block;
+  margin: 0;
+  opacity: 0;
+  transition: 0.8s;
+  animation: fadein 1.5s, vibration2 0.2s infinite;
+}
+@keyframes fadein {
+  0% {
+    font-size: 50px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    font-size: 130px;
+  }
+  99% {
+    opacity: 0;
+    font-size: 130px;
+  }
+  100% {
+    font-size: 0;
+  }
+}
+
+@keyframes fadein2 {
+  0% {
+    font-size: 45px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    font-size: 100px;
+  }
+  99% {
+    opacity: 0;
+    font-size: 100px;
+  }
+  100% {
+    font-size: 0;
+  }
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes vibration2 {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(-1deg);
+  }
+}
+
+.moleArea {
+  display: block;
+  width: 720px;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("./assets/moleGameBG.jpg");
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.moleArea > .mole {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  width: 140px;
+  height: 165px;
+}
+.moleArea > .mole > div {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-top: 165px;
+  transition: 0.8s;
+  position: relative;
+  z-index: 10;
+}
+img {
+  max-width: 100%;
+  -webkit-user-drag: none;
+}
+
+.moleArea > div > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.moleArea > div > div img:nth-child(1) {
+  display: none;
+  z-index: 1;
+}
+.moleArea > div > div.on img:nth-child(1) {
+  display: block;
+}
+.moleArea > div > div.off img:nth-child(1) {
+  display: none;
+}
+
+.moleArea > div:nth-child(1) {
+  top: 124px;
+  left: 52px;
+}
+.moleArea > div:nth-child(2) {
+  top: 124px;
+  left: 291px;
+}
+.moleArea > div:nth-child(3) {
+  top: 124px;
+  left: 526px;
+}
+.moleArea > div:nth-child(4) {
+  top: 308px;
+  left: 174px;
+}
+.moleArea > div:nth-child(5) {
+  top: 308px;
+  left: 409px;
+}
+.moleArea > div:nth-child(6) {
+  top: 492px;
+  left: 52px;
+}
+.moleArea > div:nth-child(7) {
+  top: 492px;
+  left: 291px;
+}
+.moleArea > div:nth-child(8) {
+  top: 492px;
+  left: 526px;
+}
+
+.mainWrap {
+  position: relative;
+}
+
+.startBtn {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 200px;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.2s;
+  background: #00ae68;
+}
+
+.btn {
+  font-size: 30px;
+  width: 250px;
+}
+
+.btnPush {
+  box-shadow: 0px 8px 0px 0px #007144;
+}
+.btnPush:hover {
+  margin-top: -15px;
+  margin-bottom: -8px;
+}
+.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #007144;
+}
+
+.resultArea {
+  display: block;
+  width: 720px;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(/src/assets/moleGameBG.jpg);
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.resultInner {
+  position: absolute;
+  width: 460px;
+  height: 300px;
+  background-color: #fff4de;
+  border-radius: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
+  z-index: 1;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+.resultInner h1 {
+  margin: 0;
+  text-align: center;
+  color: #764421;
+}
+.resultInner h1 span {
+  font-size: 38px;
+  color: #fff4de;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #764421;
+}
+.resultInner .title {
+  text-align: center;
+}
+.resultInner .score {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.innerBG {
+  content: "";
+  position: absolute;
+  width: 490px;
+  height: 330px;
+  background-color: #ca8555;
+  border-radius: 28px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
+}
+.resultInner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  column-count: 3;
+  -webkit-column-count: 3;
+  text-align: center;
+}
+.resultInner ul li {
+  font-size: 15px;
+  padding-top: 98px;
+  position: relative;
+  color: #213547;
+}
+.resultInner ul li::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 65px;
+  background-size: cover;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.resultInner ul li:nth-child(1):before {
+  background-image: url(./assets/deadMole.png);
+}
+.resultInner ul li:nth-child(2):before {
+  background-image: url(./assets/Mole.png);
+}
+.resultInner ul li:nth-child(3):before {
+  width: 76px;
+  height: 55px;
+  background-image: url(./assets/hammer.png);
+}
+
+.btnArea {
+  text-align: center;
+  margin-top: 26px;
+  position: relative;
+}
+
+.btnArea button {
+  font-size: 19px;
+  letter-spacing: 2px;
+  background: #7f695b;
+  color: #fff;
+  padding: 0.6em 2.4em;
+  transition: all 0.2s;
+  box-shadow: 0px 7px 0px 0px #50433a;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.btnArea button:hover {
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+.btnArea button:hover {
+  box-shadow: 0px 0px 0px 0px #50433a;
+}
