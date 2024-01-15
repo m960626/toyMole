@@ -2,7 +2,9 @@
 * 두더지 잡기 토이 프로젝트
 * 주소 : https://m960626.github.io/my-mole/ (정상 배포 중)
 <br/>
-![image](https://github.com/m960626/toyMole/assets/127086721/a20f7204-a52a-4269-be2c-4ce7b61fc8fc)
+
+![image](https://github.com/m960626/toyMole/assets/127086721/45d2e910-7e4a-4aad-bf34-33be7c2da598)
+
 <br/>
 
 ## 프로젝트 소개
